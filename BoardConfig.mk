@@ -20,8 +20,8 @@ COMMON_PATH := device/lge/g4-common
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 # Platform
-TARGET_BOARD_PLATFORM := msm8992
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno418
+TARGET_BOARD_PLATFORM := msm8952
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno405
 
 # CPU
 TARGET_ARCH := arm64
@@ -40,7 +40,7 @@ TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 TARGET_USES_64_BIT_BINDER := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8992
+TARGET_BOOTLOADER_BOARD_NAME := MSM8952
 TARGET_NO_BOOTLOADER := true
 
 TARGET_USES_C2D_COMPOSITION := true
@@ -56,7 +56,7 @@ BOARD_CUSTOM_BOOTIMG_MK := $(COMMON_PATH)/mkbootimg.mk
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01f88000 --tags_offset 0x01d88000
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/lge/msm8992
+TARGET_KERNEL_SOURCE := kernel/lge/b3
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 
@@ -87,9 +87,9 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_USES_QCOM_BSP := true
-TARGET_QCOM_AUDIO_VARIANT := caf-msm8992
-TARGET_QCOM_DISPLAY_VARIANT := caf-msm8992
-TARGET_QCOM_MEDIA_VARIANT := caf-msm8992
+TARGET_QCOM_AUDIO_VARIANT := caf-msm8952
+TARGET_QCOM_DISPLAY_VARIANT := caf-msm8952
+TARGET_QCOM_MEDIA_VARIANT := caf-msm8952
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 BOARD_USES_ALSA_AUDIO := true
@@ -131,17 +131,17 @@ WIFI_DRIVER_FW_PATH_STA := "/system/etc/firmware/fw_bcmdhd.bin"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Bluetooth
-BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/lge/g4-common/bluetooth/libbt_vndcfg.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/g4-common/bluetooth
+#BOARD_HAVE_BLUETOOTH := true
+#BOARD_HAVE_BLUETOOTH_BCM := true
+#BOARD_BLUEDROID_VENDOR_CONF := device/lge/g4-common/bluetooth/libbt_vndcfg.txt
+#BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/g4-common/bluetooth
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/lge/g4-common/ril/
+#BOARD_RIL_CLASS := ../../../device/lge/g4-common/ril/
 
 # GPS
 TARGET_GPS_HAL_PATH := $(COMMON_PATH)/gps
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := msm8992
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := msm8952
 TARGET_NO_RPC := true
 
 # Camera
@@ -190,7 +190,7 @@ NFC_NXP_CHIP_TYPE := PN547C2
 
 # HAL static libs
 BOARD_HAL_STATIC_LIBRARIES := \
-    libhealthd.msm8992
+    libhealthd.msm8952
 
 # Increase coldboot timeout
 TARGET_INCREASES_COLDBOOT_TIMEOUT := true
@@ -199,7 +199,7 @@ TARGET_INCREASES_COLDBOOT_TIMEOUT := true
 COMMON_GLOBAL_CFLAGS += -DBOARD_HAS_SENSORS_GROUP
 
 # PowerHAL
-TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/tap2wake"
+#TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/tap2wake"
 
 # inherit from the proprietary version
--include vendor/lge/g4-common/BoardConfigVendor.mk
+#-include vendor/lge/g4-common/BoardConfigVendor.mk
